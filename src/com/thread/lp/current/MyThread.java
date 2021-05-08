@@ -3,7 +3,7 @@ package com.thread.lp.current;
 /**
  * @author Administrator
  */
-public class MyThread extends Thread{
+public class MyThread extends Thread {
     public MyThread() {
         System.out.println("Constructor created..... --->" + Thread.currentThread().getName());
     }

@@ -12,7 +12,7 @@ public class TaskQueue {
     /**
      * 队列大小
      */
-    static final int QUEUE_MAX_SIZE   = 3000;
+    static final int QUEUE_MAX_SIZE = 3000;
 
     /**
      * 任务队列
@@ -22,26 +22,26 @@ public class TaskQueue {
     public TaskQueue() {
     }
 
-    private static class SingletonHolder{
+    private static class SingletonHolder {
         private static TaskQueue taskQueue = new TaskQueue();
 
     }
 
-    public static TaskQueue newInstance(){
+    public static TaskQueue newInstance() {
         return SingletonHolder.taskQueue;
     }
 
     /**
      * 生产入队
      */
-    public  void  produce(TaskMsg taskMsg) throws InterruptedException {
+    public void produce(TaskMsg taskMsg) throws InterruptedException {
         arrayBlockingQueue.put(taskMsg);
     }
 
     /**
      * 消费出队
      */
-    public  TaskMsg consume() throws InterruptedException {
+    public TaskMsg consume() throws InterruptedException {
         return (TaskMsg) arrayBlockingQueue.take();
     }
 
