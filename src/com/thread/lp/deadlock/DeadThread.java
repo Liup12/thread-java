@@ -3,6 +3,9 @@ package com.thread.lp.deadlock;
 import com.sun.javafx.tk.quantum.QuantumToolkit;
 import com.thread.lp.sync2.lockstring.ThreadB;
 
+/**
+ * 两条线程互相持有的锁，同时又需要对方的锁
+ */
 public class DeadThread implements Runnable{
     private Object lock1 = new Object();
     private Object lock2 = new Object();
