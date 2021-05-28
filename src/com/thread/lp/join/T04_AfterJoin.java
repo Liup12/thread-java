@@ -18,7 +18,7 @@ public class T04_AfterJoin {
             try {
                 synchronized (threadB){
                     System.out.println(" A run begin time =" + System.currentTimeMillis());
-                    Thread.sleep(2000);
+                    Thread.sleep(5000);
                     System.out.println(" A run end time =" + System.currentTimeMillis());
                 }
             } catch (InterruptedException e) {
@@ -32,7 +32,7 @@ public class T04_AfterJoin {
         synchronized public void run() {
             try {
                 System.out.println(" B run begin time =" + System.currentTimeMillis());
-                Thread.sleep(2000);
+                Thread.sleep(5000);
                 System.out.println(" B run end time =" + System.currentTimeMillis());
             } catch (InterruptedException e) {
                 e.printStackTrace();
